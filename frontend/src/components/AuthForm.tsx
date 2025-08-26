@@ -39,8 +39,9 @@ export default function AuthForm({ mode }: AuthFormProps) {
                 localStorage.setItem("auth_token", data.token);
             }
             setMessage(mode === "login" ? "Logged in!" : "Registered!");
-        } catch (err: any) {
-            setMessage(err?.message || "Something went wrong");
+        } catch (err: unknown) {
+            const msg = err instanceof Error ? err.message : "Something went wrong";
+            setMessage(msg);
         } finally {
             setLoading(false);
         }
