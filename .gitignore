@@ -1,0 +1,17 @@
+# Root ignores
+.env
+*.log
+.DS_Store
+
+# Node
+node_modules/
+
+# Build artifacts (monorepo catch-all)
+dist/
+coverage/
+.next/
+
+# OS / editor
+Thumbs.db
+.idea/
+.vscode/
