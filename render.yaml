@@ -13,8 +13,7 @@ services:
     plan: free
     rootDir: backend
     buildCommand: npm ci && npx prisma generate && npm run build
-    startCommand: node dist/main
-    postdeploy: npx prisma migrate deploy
+    startCommand: bash -lc "npx prisma migrate deploy && node dist/main"
     autoDeploy: true
     envVars:
       - key: NODE_ENV
