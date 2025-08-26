@@ -46,6 +46,6 @@ services:
         value: "false"
       # Point frontend to the backend public URL
       - key: NEXT_PUBLIC_API_URL
-        value: "https://test-frontend-hwjp.onrender.com"
+        value: "https://test-backend-ouok.onrender.com"
 
 
