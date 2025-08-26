@@ -3,7 +3,6 @@
 databases:
   - name: test-postgres
     databaseName: app_db
-    user: postgres
     plan: free
 
 services:
@@ -45,9 +44,6 @@ services:
         value: production
       # Point frontend to the backend public URL
       - key: NEXT_PUBLIC_API_URL
-        fromService:
-          name: test-backend
-          type: web
-          property: url
+        value: "CHANGE_ME_AFTER_FIRST_DEPLOY"
 
 
