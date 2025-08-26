@@ -1,0 +1,24 @@
+# Cursor Project Rules
+
+## Documentation
+- Update docs with every change:
+  - docs/CHANGELOG.md (summary)
+  - backend/README.md and/or frontend/README.md (usage/env/scripts/APIs/UI)
+- Ensure root README links any new docs/sections.
+
+## Branch & PR
+- Branch names: feature/*, fix/*, docs/*
+- Use PR template and complete the docs checklist before merge.
+
+## Environments
+- Keep .env minimal; document required vars in READMEs.
+- Client-exposed vars must be prefixed with NEXT_PUBLIC_.
+
+## Commands
+- Backend: npm run start:dev
+- Frontend: npm run dev
+- Before PR: build backend and frontend successfully.
+
+## Style
+- TypeScript strict defaults.
+- Clear, descriptive names; avoid abbreviations.
