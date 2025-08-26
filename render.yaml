@@ -36,12 +36,12 @@ services:
     env: node
     plan: free
     rootDir: frontend
-    buildCommand: npm ci && npm run build
+    buildCommand: npm ci --include=dev && npm run build
     startCommand: npm start
     autoDeploy: true
     envVars:
-      - key: NODE_ENV
-        value: production
+      - key: NPM_CONFIG_PRODUCTION
+        value: "false"
       # Point frontend to the backend public URL
       - key: NEXT_PUBLIC_API_URL
         value: "CHANGE_ME_AFTER_FIRST_DEPLOY"
