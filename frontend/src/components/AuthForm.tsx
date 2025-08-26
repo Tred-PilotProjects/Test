@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 type Mode = "login" | "register";
 
@@ -9,6 +10,7 @@ interface AuthFormProps {
 }
 
 export default function AuthForm({ mode }: AuthFormProps) {
+    const router = useRouter();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirm, setConfirm] = useState("");
@@ -39,6 +41,8 @@ export default function AuthForm({ mode }: AuthFormProps) {
                 localStorage.setItem("auth_token", data.token);
             }
             setMessage(mode === "login" ? "Logged in!" : "Registered!");
+            // Navigate to the fish tank homepage after successful auth
+            router.push("/");
         } catch (err: unknown) {
             const msg = err instanceof Error ? err.message : "Something went wrong";
             setMessage(msg);

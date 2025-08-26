@@ -28,6 +28,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <a
+          href="/"
+          className="fixed top-4 left-4 z-50 rounded-xl bg-white/90 px-4 py-2 text-[#0e3e79] font-bold border-2 border-[#0e3e79]/30 hover:bg-white shadow"
+          aria-label="Home"
+        >
+          🏠 Home
+        </a>
         {children}
       </body>
     </html>
